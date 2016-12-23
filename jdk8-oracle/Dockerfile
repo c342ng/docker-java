@@ -5,7 +5,7 @@ ENV JAVA_VERSION 8u111
 ENV CA_CERTIFICATES_JAVA_VERSION 20140324
 
 # Install Oracle JDK 8u11
-RUN mkdir /usr/lib/jvm/ && cd /tmp && \
+RUN mkdir -p /usr/lib/jvm/ && cd /tmp && \
     curl -L -O -H "Cookie: oraclelicense=accept-securebackup-cookie" -k "http://download.oracle.com/otn-pub/java/jdk/8u111-b14/jdk-8u111-linux-x64.tar.gz" && \
     tar xf jdk-8u111-linux-x64.tar.gz -C /usr/lib/jvm/ && rm /tmp/jdk-8u111-linux-x64.tar.gz
 
